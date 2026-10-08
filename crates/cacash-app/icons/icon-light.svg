@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+
+    <linearGradient id="symbolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <!-- Background squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="#F8FAFC" stroke="rgba(0, 0, 0, 0.08)" stroke-width="4"/>
+  <!-- Radial glow halus -->
+  <circle cx="256" cy="256" r="210" fill="url(#glow)"/>
+  <!-- Main Symbol -->
+  <g fill="none">
+
+    <!-- Faceted diamond coin outline with ascending chevron arrow -->
+    <path d="M256 86 L396 256 L256 426 L116 256 Z"
+          stroke="url(#symbolGrad)" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M184 276 L256 204 L328 276"
+          stroke="#059669" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+
+  </g>
+</svg>
