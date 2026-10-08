@@ -1,28 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-
-    <linearGradient id="symbolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34D399" />
-      <stop offset="100%" stop-color="#10B981" />
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
     </linearGradient>
-
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    <radialGradient id="emeraldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="65%" stop-color="#10B981" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <!-- Background squircle -->
-  <rect x="24" y="24" width="464" height="464" rx="112" fill="#0A0A0C" stroke="#10B981" stroke-width="4" stroke-opacity="0.3"/>
-  <!-- Radial glow halus -->
-  <circle cx="256" cy="256" r="210" fill="url(#glow)"/>
-  <!-- Main Symbol -->
+
+  <!-- Background Base: Pitch Black Squircle (#0A0A0C) -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="#0A0A0C" stroke="#10B981" stroke-width="4" stroke-opacity="0.4"/>
+  <circle cx="256" cy="256" r="200" fill="url(#emeraldGlow)"/>
+
+  <!-- Cyberpunk Monoline Wireframe Coin & Growth Chevrons -->
   <g fill="none">
+    <!-- Corner HUD Reticles -->
+    <path d="M 80 140 L 80 80 L 140 80" stroke="#34D399" stroke-width="6" stroke-opacity="0.75"/>
+    <path d="M 432 140 L 432 80 L 372 80" stroke="#34D399" stroke-width="6" stroke-opacity="0.75"/>
+    <path d="M 80 372 L 80 432 L 140 432" stroke="#34D399" stroke-width="6" stroke-opacity="0.75"/>
+    <path d="M 432 372 L 432 432 L 372 432" stroke="#34D399" stroke-width="6" stroke-opacity="0.75"/>
 
-    <!-- Faceted diamond coin outline with ascending chevron arrow -->
-    <path d="M256 86 L396 256 L256 426 L116 256 Z"
-          stroke="url(#symbolGrad)" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M184 276 L256 204 L328 276"
-          stroke="#34D399" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Outer Faceted Diamond Coin (Hollow Wireframe) -->
+    <polygon points="256,76 388,152 436,256 388,360 256,436 124,360 76,256 124,152"
+             stroke="url(#emeraldGrad)" stroke-width="20" stroke-linejoin="miter" stroke-miterlimit="4"/>
 
+    <!-- Inner Concentric Wireframe Facet -->
+    <polygon points="256,120 354,176 390,256 354,336 256,392 158,336 122,256 158,176"
+             stroke="#10B981" stroke-width="6" stroke-opacity="0.5" stroke-dasharray="14 10"/>
+
+    <!-- Main Ascending Growth Chevron (Financial Wealth Vector) -->
+    <path d="M 160 286 L 256 190 L 352 286"
+          stroke="#34D399" stroke-width="26" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4"/>
+
+    <!-- Secondary Upper Apex Chevron (Prosperity Spark) -->
+    <path d="M 196 230 L 256 170 L 316 230"
+          stroke="#A7F3D0" stroke-width="14" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4"/>
+
+    <!-- Bottom Structural Base Anchor (Family Foundation) -->
+    <path d="M 200 340 L 256 376 L 312 340"
+          stroke="#10B981" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4"/>
+
+    <!-- HUD Crosshair Center Marker -->
+    <line x1="256" y1="236" x2="256" y2="276" stroke="#34D399" stroke-width="6" stroke-linecap="square"/>
+    <line x1="236" y1="256" x2="276" y2="256" stroke="#34D399" stroke-width="6" stroke-linecap="square"/>
   </g>
 </svg>
