@@ -1,0 +1,110 @@
+[app]
+name = "CACash"
+slug = "cacash"
+bundle_id = "com.fathforce.cacash"
+version = "0.1.0"
+accent_color = "emerald"
+accent_hex = "#10b981"
+error_prefix = "CASH"
+description = "Sovereign Family Cashflow & Islamic Wealth Engine — Zero-Knowledge Local Vault"
+brand = "Fathforce"
+
+[window]
+title = "CACash — Sovereign Family Cashflow & Islamic Wealth Engine"
+width = 1360
+height = 880
+min_width = 960
+min_height = 640
+
+[security]
+master_password_required = true
+profile_pin_enabled = true
+storage_engine = "sqlcipher"
+
+[modules]
+sample_slice_enabled = true
+ai_assistant_enabled = true
+pro_licensing_enabled = true
+updater_enabled = true
+crash_reporting_enabled = true
+backup_restore_enabled = true
+islamic_finance_enabled = true
+kids_allowance_enabled = true
+
+[roles]
+default_role = "owner"
+allowed_roles = ["owner", "partner", "child", "member"]
+
+[[menus]]
+key = "dashboard"
+label = "Ringkasan"
+href = "/dashboard"
+icon = "layout-dashboard"
+description = "Overview ringkasan kas, chart, dan transaksi terbaru"
+
+[[menus]]
+key = "transactions"
+label = "Transaksi"
+href = "/transactions"
+icon = "arrow-left-right"
+description = "Buku kas, mutasi rekening, dan pencatatan transaksi"
+
+[[menus]]
+key = "accounts"
+label = "Rekening & Kas"
+href = "/accounts"
+icon = "landmark"
+description = "Rekening bank, e-wallet, brankas tunai & pemisahan harta"
+
+[[menus]]
+key = "budgets"
+label = "Amplop Anggaran"
+href = "/budgets"
+icon = "mail"
+description = "Alokasi dan pelacakan anggaran bulanan zero-based"
+
+[[menus]]
+key = "goals"
+label = "Target Impian"
+href = "/goals"
+icon = "target"
+description = "Target tabungan, qurban, haji, dan dana darurat"
+
+[[menus]]
+key = "islamic"
+label = "Zakat & Syariah"
+href = "/islamic"
+icon = "moon"
+description = "Kalkulator zakat mal & fitrah, screening anti-riba, hadits rezeki"
+
+[[menus]]
+key = "kids"
+label = "Celengan Anak"
+href = "/kids"
+icon = "sparkles"
+description = "Uang saku, misi kebaikan, dan literasi finansial anak"
+
+[[menus]]
+key = "investments"
+label = "Aset & Hutang"
+href = "/investments"
+icon = "trending-up"
+description = "Portfolio investasi, net worth, dan monitoring hutang"
+
+[[menus]]
+key = "ai_coach"
+label = "AI Coach"
+href = "/ai-coach"
+icon = "bot"
+description = "Konsultasi finansial keluarga & perencanaan syariah berbasis AI"
+
+[[menus]]
+key = "settings"
+label = "Pengaturan"
+href = "/settings"
+icon = "settings"
+description = "Profil keluarga, mata uang, export backup & keamanan vault"
+
+[billing]
+enabled = true
+license_tier = "free"

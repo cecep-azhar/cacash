@@ -13,6 +13,10 @@ pub fn get_connection() -> Result<&'static parking_lot::Mutex<Connection>, CashE
     let path = paths::db_path();
     let conn = Connection::open(&path).map_err(|e| CashError::Db(e.to_string()))?;
 
+    // SQLCipher default encryption key if configured or default local zero-knowledge key
+    let vault_key = std::env::var("CACASH_VAULT_KEY").unwrap_or_else(|_| "cacash-sovereign-vault-key-2026".to_string());
+    let _ = conn.execute_batch(&format!("PRAGMA key = '{}';", vault_key.replace('\'', "''")));
+
     conn.execute_batch(
         r#"
         PRAGMA journal_mode = WAL;

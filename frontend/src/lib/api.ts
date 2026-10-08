@@ -73,7 +73,7 @@ export interface Debt {
   principal_amount: number;
   remaining_amount: number;
   interest_rate: string;
-  is_riba: bool;
+  is_riba: boolean;
   due_date: string;
 }
 
