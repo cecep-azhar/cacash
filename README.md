@@ -1,6 +1,6 @@
 # CACash Family — Sovereign Family Cashflow & Islamic Wealth Engine
 
-[![Release](https://img.shields.io/badge/release-v0.1.0-10b981.svg)](https://github.com/cecep-azhar/cacash)
+[![Release](https://img.shields.io/badge/release-v0.1.0-10b981.svg)](https://github.com/cecepazhar/cacash)
 [![License](https://img.shields.io/badge/license-Proprietary-blue.svg)]()
 [![Platform](https://img.shields.io/badge/platform-Linux%20|%20Windows%20|%20macOS%20|%20Android-green.svg)]()
 [![CADS](https://img.shields.io/badge/CADS-v1.0%20Compliant-purple.svg)]()
